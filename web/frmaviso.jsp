@@ -26,7 +26,7 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td><input type="submit" /></td>
+                    <td><input type="submit" value="Enviar" /></td>
                 </tr>                
                 
             </table>

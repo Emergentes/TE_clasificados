@@ -10,10 +10,13 @@ public class ConexionDB {
 
    public ConexionDB() {
        try {
+           Class.forName("com.mysql.jdbc.Driver");
            conn = DriverManager.getConnection(url, usuario, password);
            if (conn != null) {
                System.out.println("Conexion Ok: " + conn);
            }
+       } catch (ClassNotFoundException ex) {
+               System.out.println("Driver inexistente: " + ex.getMessage());
        } catch (SQLException ex) {
            System.out.println("Error de SQL: " + ex.getMessage());
        }       
